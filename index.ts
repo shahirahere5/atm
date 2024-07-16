@@ -34,7 +34,8 @@ if (answers.pin !== myPin) {
                     type: "number",
                     name: "Amount"
                 })
-                console.log("your remaining amount is "  + (myBalance - withdrawalAmount.Amount));
+                myBalance -= withdrawalAmount.Amount;
+                console.log("your remaining amount is "  + myBalance );
             }
             console.log("thankyou for banking with us!");            
 }; 

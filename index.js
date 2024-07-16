@@ -32,27 +32,9 @@ else if (answers.pin === myPin) {
             type: "number",
             name: "Amount"
         });
-        console.log("your remaining amount is " + (myBalance - withdrawalAmount.Amount));
+        myBalance -= withdrawalAmount.Amount;
+        console.log("your remaining amount is " + myBalance);
     }
     console.log("thankyou for banking with us!");
 }
-// const atmAction = await inquirer.prompt([
-//     {
-//         message: "what do you want to do",
-//         type: "list",
-//         choices: ["withdraw", "check balance"]       
-//         name: "action"
-//     }
-// ]) 
-//  if (answers.pin === myPin) {
-//     if (atmAction.action === "check balance") {
-//         console.log("your balance is " + myBalance);
-//     } else if (atmAction.action === "withdraw") {
-//         const withdrawalAmount = await inquirer.prompt({
-//             message: "enter amount to withdraw: ",
-//             type: "number",
-//             name: "Amount"
-//         })
-//         console.log("your remaining amount is "  + (myBalance - withdrawalAmount.Amount));
-//     }
-// };
+;
